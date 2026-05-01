@@ -43,4 +43,12 @@ export class App {
     alert("Counter: " + this.counter);
   }
 
+
+  // some more examples of event binding in typescript
+  handleEvent(eventName: string, event: Event) {
+    const target = event.target as HTMLInputElement | null;
+    console.log(eventName + " : " + target?.value); // used to fetch value which user provided in input field
+  }
+
+
 }

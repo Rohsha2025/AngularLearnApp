@@ -27,6 +27,44 @@
       <button (click)="counterOps('increment')">Increment Counter</button>
     </div>
 
+    <!-- some more event binding concept -->
+    <div>
+      <!-- $event contains the event object -->
+       <!-- $event.type contains the type of the event -->
+      <!-- this is example of input event binding, in this value print on console parallel to the input -->
+      <input type="text" placeholder="Enter something here" (input)="handleEvent($event.type, $event)">
+      <br>
+      <!-- this is example of keyup/change event binding -->
+      <!-- this print value after clicking enter -->
+      <input type="text" placeholder="Enter something here" (change)="handleEvent($event.type, $event)">
+
+      <br>
+      <!-- this is example of click event binding -->
+      <button (click)="handleEvent($event.type, $event)">Click Me</button>
+      <br>
+      <select name="cars" id="cars" (change)="handleEvent($event.type, $event)">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+
+      <br>
+
+      <!-- blur event -- called when user leaves the input field -->
+      <input type="text" placeholder="Enter something here" (blur)="handleEvent($event.type, $event)">
+      <br>
+
+      <!-- focus event -- called when user focuses on the input field -->
+      <input type="text" placeholder="Enter something here" (focus)="handleEvent($event.type, $event)">
+      <br>
+
+       <!-- mouseover event -- called when user hovers over the element --> 
+      <button (mouseover)="handleEvent($event.type, $event)">Hover Me</button>
+       <br>
+    </div>
+
+
     <!-- component here-->
      <app-login></app-login> <!-- to make it known to angular we have to import in app.ts file-->
 
