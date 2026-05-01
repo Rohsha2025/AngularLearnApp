@@ -20,6 +20,13 @@
 
     </div>
 
+    <div>
+      <h3>Counter current value : {{ counter }}</h3>
+      <button (click)="counterOps('decrement')">Decrement Counter</button>
+      <br>
+      <button (click)="counterOps('increment')">Increment Counter</button>
+    </div>
+
     <!-- component here-->
      <app-login></app-login> <!-- to make it known to angular we have to import in app.ts file-->
 
