@@ -4,6 +4,24 @@
   <div class="container">
     <h1>Welcome to the App!</h1>
     <p>This is the main content of the application.</p>
+
+    <br>
+    <h3>Value fetched from ts file : {{ name() }}</h3>
+    <h5>Setting value from html file using input field: </h5>
+    <input type="text" placeholder="Enter name" [value]="name()" 
+        (input)="setValue($event.target.value)">
+    <br>
+    <h5>To reset value : </h5>
+    <button (click)="resetValue()">Reset</button>
+
+    <br style="padding: 20px;">
+    <button style="margin-top: 20px;" (click)="uppercaseName()" >
+      Uppercase : {{processedName()}}</button>
+    <br>
+    <button style="margin-top: 20px;" (click)="addGreeting()">
+      Add Greeting : {{processedName()}}</button>
+
+
   </div>
 </main>
     
