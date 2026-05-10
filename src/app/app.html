@@ -1,24 +1,23 @@
-
-
 <main >
   <div >
 
-    <h1>Hello, {{ title() }}</h1>
-    <br>
-    <h2>Name: {{ name }}</h2>
-    <h2>Age: {{ age }}</h2>
-    <h3>Name from function: {{ getName() }}</h3>
+    <h1>Welcome to Counter app!</h1>
 
-    <h3> Basic calculation using interpolation : {{10+20}}</h3>
-    <br>
-    <h3> Basic calculation using interpolation and ts file : {{getValue(10, 20,30)}}</h3>
-
-    <h4>We can use inline interpolation in the template</h4>
-
-    <!-- call function -->
-    <button (click)="getName()">Get Name</button>
-
+    <div>
+      <h2>The current count is: {{ count() }}</h2>
+      <br>
+      <h4> To increase count :</h4>
+      <button (click)="operation('add')">Increment</button>
+      <br>
+      <h4> To decrease count :</h4>
+      <button (click)="operation('subtract')">Decrement</button>
+      <br>
+      <h4> To reset count :</h4>
+      <button (click)="operation('reset')">Reset</button>
     </div>
 
-  </main>
+
+  </div>
+
+</main>
     
